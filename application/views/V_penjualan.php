@@ -101,6 +101,18 @@
           <?php } ?>
           </select>
         </div>
+        <div class="form-group">
+          <label>Cicilan Pokok</label>
+          <input value="" type="text" name="cicilan_pokok" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label>Cicilan Bunga</label>
+          <input value="" type="text" name="cicilan_bunga" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label>Cicilan Total</label>
+          <input value="" type="text" name="cicilan_total" class="form-control" required>
+        </div>
       </div>
       <div class="modal-footer">
         <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
@@ -113,12 +125,12 @@
 
 
 <!-- Edit Modal HTML -->
-<?php foreach ($penjualan as $key) {
+<?php foreach ($penjualan as $kunci) {
   ?>
-<div id="editEmployeeModal<?= $key->id_penjualan  ?>" class="modal fade">
+<div id="editEmployeeModal<?= $kunci->id_penjualan  ?>" class="modal fade">
 <div class="modal-dialog">
   <div class="modal-content">
-    <form action="<?php echo site_url('C_Motor/update/'.$key->id_penjualan); ?>" method="post">
+    <form action="<?php echo site_url('C_Motor/update/'.$kunci->id_penjualan); ?>" method="post">
       <div class="modal-header">
         <h4 class="modal-title">Edit Employee</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -155,6 +167,18 @@
             <option value="<?= $key->id_uang_muka  ?>"><?= $key->uang_muka ?></option>
           <?php } ?>
           </select>
+        </div>
+        <div class="form-group">
+          <label>Cicilan Pokok</label>
+          <input value="<?= $kunci->cicilan_pokok  ?>" type="text" name="cicilan_pokok" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label>Cicilan Bunga</label>
+          <input value="<?= $kunci->cicilan_bunga  ?>" type="text" name="cicilan_bunga" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label>Cicilan Total</label>
+          <input value="<?= $kunci->cicilan_total  ?>" type="text" name="cicilan_total" class="form-control" required>
         </div>
       </div>
       <div class="modal-footer">

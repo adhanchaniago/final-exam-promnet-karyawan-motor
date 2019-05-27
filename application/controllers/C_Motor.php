@@ -68,9 +68,9 @@ class C_Motor extends CI_Controller {
 			'id_cicil'      =>  $this->input->post('id_cicil'),
 			'id_uang_muka'    =>  $this->input->post('id_uang_muka'),
 			'id_motor'	  =>  $this->input->post('id_motor'),
-			'cicilan_pokok' => 10000,
-			'cicilan_bunga' => 2000,
-			'cicilan_total'=> 1000
+			'cicilan_pokok' => $this->input->post('cicilan_pokok'),
+			'cicilan_bunga' => $this->input->post('cicilan_bunga'),
+			'cicilan_total'=> $this->input->post('cicilan_total')
 		);
 		$insert =  $this->curl->simple_post($this->API.'/penjualan', $data, array(CURLOPT_BUFFERSIZE => 0));
 
@@ -111,9 +111,9 @@ class C_Motor extends CI_Controller {
 			'id_cicil'      =>  $this->input->post('id_cicil'),
 			'id_uang_muka'    =>  $this->input->post('id_uang_muka'),
 			'id_motor'	  =>  $this->input->post('id_motor'),
-			'cicilan_pokok' => 10000,
-			'cicilan_bunga' => 2000,
-			'cicilan_total'=> 1000
+			'cicilan_pokok' => $this->input->post('cicilan_pokok'),
+			'cicilan_bunga' => $this->input->post('cicilan_bunga'),
+			'cicilan_total'=> $this->input->post('cicilan_total')
 		);
 		$update =  $this->curl->simple_put($this->API.'/penjualan/'.$id, $data, array(CURLOPT_BUFFERSIZE => 0));
 
