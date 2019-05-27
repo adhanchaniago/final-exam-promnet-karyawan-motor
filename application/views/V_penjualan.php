@@ -71,19 +71,35 @@
       <div class="modal-body">
         <div class="form-group">
           <label>Tipe</label>
-          <input type="text" name="name" class="form-control" required>
+          <select name="id_motor" class="form-control">
+            <?php foreach($motor as $key ) {
+
+            ?>
+            <option value="<?= $key->id_motor  ?>"><?= $key->tipe_motor ?></option>
+
+          <?php } ?>
+          </select>
         </div>
-        <div class="form-group">
-          <label>Harga</label>
-          <input type="email" name="email" class="form-control" required>
-        </div>
+
         <div class="form-group">
           <label>Tenor</label>
-          <input type="email" name="email" class="form-control" required>
+          <select name="id_cicil" class="form-control">
+            <?php foreach($cicilan as $key ) {
+
+            ?>
+            <option value="<?= $key->id_cicil  ?>"><?= $key->tenor ?></option>
+          <?php } ?>
+          </select>
         </div>
         <div class="form-group">
           <label>Uang Muka</label>
-          <textarea class="form-control" name="address" required></textarea>
+          <select name="id_uang_muka" class="form-control">
+            <?php foreach($dp as $key ) {
+
+            ?>
+            <option value="<?= $key->id_uang_muka  ?>"><?= $key->uang_muka ?></option>
+          <?php } ?>
+          </select>
         </div>
       </div>
       <div class="modal-footer">
@@ -110,19 +126,35 @@
       <div class="modal-body">
         <div class="form-group">
           <label>Tipe</label>
-          <input value="<?= $key->tipe_motor ?>" type="text" name="name" class="form-control" required>
+          <select name="id_motor" class="form-control">
+            <?php foreach($motor as $key ) {
+
+            ?>
+            <option value="<?= $key->id_motor  ?>"><?= $key->tipe_motor ?></option>
+
+          <?php } ?>
+          </select>
         </div>
-        <div class="form-group">
-          <label>Harga</label>
-          <input value="<?= $key->harga_motor ?>" type="email" name="email" class="form-control" required>
-        </div>
+
         <div class="form-group">
           <label>Tenor</label>
-          <textarea value="" class="form-control" name="address" required><?= $key->tenor ?></textarea>
+          <select name="id_cicil" class="form-control">
+            <?php foreach($cicilan as $key ) {
+
+            ?>
+            <option value="<?= $key->id_cicil  ?>"><?= $key->tenor ?></option>
+          <?php } ?>
+          </select>
         </div>
         <div class="form-group">
           <label>Uang Muka</label>
-          <input value="<?= $key->uang_muka ?>" type="text" name="phone" class="form-control" required>
+          <select name="id_uang_muka" class="form-control">
+            <?php foreach($dp as $key ) {
+
+            ?>
+            <option value="<?= $key->id_uang_muka  ?>"><?= $key->uang_muka ?></option>
+          <?php } ?>
+          </select>
         </div>
       </div>
       <div class="modal-footer">
